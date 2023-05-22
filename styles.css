@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(teamphoto.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 20px;
+  z-index: 1; /* Ensure the header appears above other elements */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #B8860B; /* Set the initial font color to dark gold */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth color and text-shadow transition on hover */
+}
+
+nav ul li a:hover {
+  color: #FFD700; /* Change font color to gold on hover */
+  text-shadow: none; /* Remove text shadow on hover */
+}
+
+main {
+  margin: 0;
+  padding-top: 80px; /* Adjust the padding-top value to create space below the navbar */
+  background-color: #333; /* Updated background color to dark grey */
+}
+
+#hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8); /* Updated to a greyish black color with transparency */
+  animation: fadeIn 1s ease; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#hero img {
+  max-width: 100%;
+  border: none; /* Remove the border around the logo */
+}
+
+#about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  background-color: #333;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  text-align: left;
+}
+
+
+#about:hover {
+  background-color: #222; /* Darken the background color on hover */
+}
+
+#about h2 {
+  color: #B8860B; /* Set the font color to dark gold */
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#about p {
+  color: #B8860B; /* Set the initial font color to dark gold */
+  line-height: 1.6;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth color and text-shadow transition on hover */
+}
+
+#about:hover p {
+  color: #FFD700; /* Change font color to gold on hover */
+  text-shadow: none; /* Remove text shadow on hover */
+}
+
+footer {
+  background-color: #222;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
