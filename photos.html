@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Photos (2023) - Brimbank Lions Cricket Club</title>
+  <style>
+    /* Additional custom styles for photos.html */
+    /* Add any additional custom styles here */
+    /* Preserve the existing CSS rules from styles.css */
+    .message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 18px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="photos.html" id="photos-link">Photos (2023)</a></li>
+        <li><a href="sponsors.html">Sponsors (2023)</a></li>
+        <li><a href="#">Match Report</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <img src="logo.jpg" alt="Brimbank Lions Cricket Club">
+    </section>
+    <div class="message" id="message">
+      Double click on photos to access
+    </div>
+  </main>
+
+  <script>
+    var photosLink = document.getElementById("photos-link");
+    var message = document.getElementById("message");
+    var doubleClick = false;
+
+    photosLink.addEventListener("click", function(event) {
+      if (doubleClick) {
+        var password = prompt("Please enter the password:");
+        if (password !== null && password === "2020") {
+          event.preventDefault(); // Prevent the default behavior of following the link
+          window.location.href = "https://drive.google.com/drive/folders/1p1w__WlIjmBHjd9RG44AslGrQr5qCYSF?usp=sharing";
+        }
+      } else {
+        event.preventDefault(); // Prevent the default behavior of following the link
+        doubleClick = true;
+        message.style.display = "block";
+        setTimeout(function() {
+          message.style.display = "none";
+          doubleClick = false;
+        }, 3000);
+      }
+    });
+  </script>
+</body>
+</html>

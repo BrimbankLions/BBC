@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Sponsors (2023) - Brimbank Lions Cricket Club</title>
+  <style>
+    /* Additional custom styles for sponsors.html */
+    /* Add any additional custom styles here */
+    /* Preserve the existing CSS rules from styles.css */
+    body {
+      background-image: url(sponsors.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #000;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      margin: 0;
+    }
+
+    .message {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #B8860B;
+      padding: 10px 20px;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="photos.html">Photos (2023)</a></li>
+        <li><a href="#" id="sponsors-link">Sponsors (2023)</a></li>
+        <li><a href="#">Match Report</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <script>
+    var sponsorsLink = document.getElementById("sponsors-link");
+
+    sponsorsLink.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      var message = document.createElement("div");
+      message.classList.add("message");
+      message.innerText = "Thank you to our sponsors for the 2023 season";
+      document.body.appendChild(message);
+    });
+  </script>
+</body>
+</html>
+
+
+
+
